@@ -1,0 +1,57 @@
+{{#if profesor}}
+<table class="table table-sm">
+    <thead>
+        <tr  class="text center">
+            <th scope="col">Num.</th>
+            <th scope="col">RFC</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Paterno</th>
+            <th scope="col">Materno</th>
+            <th scope="col">Nacimiento</th>
+            <th scope="col">Direccion</th>
+            <th scope="col">Celular</th>
+            <th scope="col">Profesion</th>
+            <th scope="col">NumEmpleado</th>
+            <th scope="col">Acciones</th>
+        </tr>
+    </thead>
+    <tbody>
+        {{#each profesor}}
+        <tr>
+            <td>{{@index}}</td>
+            <td>{{rfc}}</td>
+            <td>{{nombre}}</td>
+            <td>{{paterno}}</td>
+            <td>{{materno}}</td>
+            <td>{{fechaNacimiento}}</td>
+            <td>{{direccion}}</td>
+            <td>{{celular}}</td>
+            <td>{{profesion}}</td>
+            <td>{{numeroEmpleado}}</td>
+            <td>
+              {{#if opcion}}
+              <a href="/statusProfesor/{{_id}}" class="btn btn-warning">No activo</a>
+              {{else}}
+                <a href="/statusProfesor/{{_id}}" class="btn btn-success">Activo</a>
+              {{/if}}
+              
+                <td>
+                <a href="/actualizarProfesor/{{_id}}" style="background-color: rgb(197, 139, 189)" class="btn btn-outline-light">Actualizar</a>
+                </td>
+                <td>
+                <a href="/eliminarProfesor/{{_id}}" style="background-color: rgb(197, 139, 189)" class="btn btn-outline-light">Eliminar</a>
+                </td>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center">
+    <h1>No hay profesores</h1>
+    <img src="/icons/carpeta-vacia.png" class="w-75">
+</div>
+</div>
+
+{{/if}}

@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-5-offset-md-3">
+            <div class="card card-body bg-ligth p-4 text-dark">
+ <h1>Actualizar Alumno</h1>
+
+                <form action="/actualizarAlumno/{{alumnos._id}}" method="POST">
+    <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" placeholder="Nombre" id="nombre" 
+        value="{{alumnos.nombre}}" class="form-control bg-ligth text-dark">
+    </div>
+    <div>
+        <label for="paterno">Apellido paterno:</label>
+        <input type="text" name="paterno" placeholder="Paterno" id="paterno" 
+        value="{{alumnos.paterno}}" class="form-control bg-ligth text-dark">
+    </div>
+    <div>
+        <label for="materno">Apellido materno:</label>
+        <input type="text" name="materno" placeholder="Materno" id="materno"
+        value="{{alumnos.materno}}" class="form-control bg-ligth text-dark">
+    </div>
+    <div>
+        <label for="fechaNacimiento">Fecha nacimiento:</label>
+        <input type="date" name="fechaNacimiento" id="fechaNacimiento" 
+        value="{{alumnos.fechaNacimiento}}" class="form-control bg-ligth text-dark">
+    </div>
+    <div>
+        <label for="sexo">Sexo</label>
+        <select name="sexo" id="sexo" class="form-control bg-ligth text-dark">
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+        </select>
+    </div>
+    <div>
+        <label for="celular">Celular:</label>
+        <input type="number" name="celular" placeholder="Celular" id="celular" 
+        value="{{alumnos.celular}}" class="form-control bg-ligth text-dark">
+    </div>
+    <div>
+        <label for="direccion">Direccion:</label>
+        <input type="text" name="direccion" placeholder="Direccion" id="direccion" 
+        value="{{alumnos.direccion}}" class="form-control bg-ligth text-dark">
+    </div>
+    <button style="background-color: rgb(197, 139, 189)" class="btn btn-outline-light btn-sm mt-4">Actualizar</button>
+</form>
+            </div>
+        </div>
+    </div>
+</div>

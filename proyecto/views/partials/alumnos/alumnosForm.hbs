@@ -1,0 +1,38 @@
+<div class="form-row car-body mb-3 rounded-0 text-dark form-sm">
+
+    <form action="/alumnos/agregar" method="POST">
+    <h1>Agregar Alumno</h1>
+    <div>
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="nombre" placeholder="Nombre" id="nombre" class="form-control bg-ligth text-dark"/>
+    </div>
+    <div>
+        <label for="paterno">Apellido paterno:</label>
+        <input type="text" name="paterno" placeholder="Paterno" id="paterno" class="form-control bg-ligth text-dark" />
+    </div>
+    <div>
+        <label for="materno">Apellido materno:</label>
+        <input type="text" name="materno" placeholder="Materno" id="materno" class="form-control bg-ligth text-dark"/>
+    </div>
+    <div>
+        <label for="fechaNacimiento">Fecha nacimiento:</label>
+        <input type="date" name="fechaNacimiento" id="fechaNacimiento" class="form-control bg-ligth text-dark"/>
+    </div>
+    <div>
+        <label for="sexo">Sexo</label>
+        <select name="sexo" id="sexo" class="form-control bg-ligth text-dark">
+            <option value="masculino">Masculino</option>
+            <option value="femenino">Femenino</option>
+        </select>
+    </div>
+    <div>
+        <label for="celular">Celular:</label>
+        <input type="number" name="celular" placeholder="Celular" id="celular" class="form-control bg-ligth text-dark"/>
+    </div>
+    <div>
+        <label for="direccion">Direccion:</label>
+        <input type="text" name="direccion" placeholder="Direccion" id="direccion" class="form-control bg-ligth text-dark"/>
+    </div>
+    <button style="background-color: rgb(197, 139, 189)" class="btn btn-outline-light btn-sm mt-4">Agregar</button>
+</form>
+</div>

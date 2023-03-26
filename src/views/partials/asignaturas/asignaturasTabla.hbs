@@ -1,0 +1,47 @@
+{{#if asignaturas}}
+<table  class="table table-sm">
+    <thead>
+        <tr class="text center">
+            <th scope="col">Num.</th>
+            <th scope="col">Nombre</th>
+            <th scope="col">Creditos</th>
+            <th scope="col">Horas</th>
+            <th scope="col">Acciones</th>
+           
+        </tr>
+    </thead>
+
+    <tbody>
+        {{#each asignaturas}}
+         <tr>
+            <td>{{@index}}</td>
+            <td>{{nombre}}</td>
+            <td>{{creditos}}</td>
+            <td>{{horas}}</td>
+            <td>
+              {{#if opcion}}
+              <a href="/statusAsignatura/{{_id}}" class="btn btn-warning">No activo</a>
+              {{else}}
+                <a href="/statusAsignatura/{{_id}}" class="btn btn-success">Activo</a>
+              {{/if}}
+              
+                <td>
+                <a href="/actualizarAsignatura/{{_id}}"  style="background-color: rgb(197, 139, 189)" class="btn btn-outline-light">Actualizar</a>
+                </td>
+                <td>
+                <a href="/eliminarAsignatura/{{_id}}"  style="background-color: rgb(197, 139, 189)" class="btn btn-outline-light">Eliminar</a>
+                </td>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
+{{else}}
+<div class="h-100 d-flex align-items-center justify-content-center">
+    <div class="text-center">
+    <h1>No hay asignaturas</h1>
+    <img src="/icons/carpeta-vacia.png" class="w-75">
+</div>
+</div>
+
+{{/if}}
